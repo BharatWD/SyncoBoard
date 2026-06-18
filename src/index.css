@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Custom scrollbar matching dark slate mode */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  transition: background-color 0.2s, color 0.15s;
+}
+
+/* Base custom input focus styling */
+input:focus, textarea:focus, select:focus {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 1px #ffffff !important;
+}
+
+/* ==========================================
+   LIGHT MODE DESIGN SPECIFICATIONS & OVERRIDES
+   ========================================== */
+
+body.light {
+  background-color: #f4f4f7 !important;
+  color: #09090b !important;
+}
+
+/* Foreground backgrounds: black maps to white */
+body.light .bg-black {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+}
+
+/* Dark grey elements map to clean soft grey background */
+body.light .bg-\[\#0c0c0c\] {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+}
+
+body.light .bg-\[\#111111\] {
+  background-color: #ededf1 !important;
+  color: #09090b !important;
+}
+
+body.light .bg-\[\#1a1a1a\] {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+}
+
+body.light .bg-zinc-900 {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+}
+
+body.light .bg-zinc-950 {
+  background-color: #ededf1 !important;
+  color: #09090b !important;
+}
+
+/* Override text-white with text-zinc-950 */
+body.light .text-white {
+  color: #09090b !important;
+}
+
+body.light .text-white\/40 {
+  color: rgba(9, 9, 11, 0.45) !important;
+}
+
+body.light .text-white\/50 {
+  color: rgba(9, 9, 11, 0.55) !important;
+}
+
+body.light .text-white\/70 {
+  color: rgba(9, 9, 11, 0.75) !important;
+}
+
+body.light .text-white\/30 {
+  color: rgba(9, 9, 11, 0.35) !important;
+}
+
+body.light .text-white\/35 {
+  color: rgba(9, 9, 11, 0.4) !important;
+}
+
+/* White borders map to dark borders */
+body.light .border-white {
+  border-color: #0c0c0c !important;
+}
+
+body.light .border-2 {
+  border-width: 2px;
+}
+
+body.light .border-white\/10 {
+  border-color: rgba(9, 9, 11, 0.1) !important;
+}
+
+body.light .border-white\/20 {
+  border-color: rgba(9, 9, 11, 0.16) !important;
+}
+
+body.light .border-white\/25 {
+  border-color: rgba(9, 9, 11, 0.22) !important;
+}
+
+body.light .border-white\/30 {
+  border-color: rgba(9, 9, 11, 0.28) !important;
+}
+
+/* Border on hover states */
+body.light .hover\:border-white:hover {
+  border-color: #09090b !important;
+}
+
+body.light .hover\:border-white\/30:hover {
+  border-color: rgba(9, 9, 11, 0.3) !important;
+}
+
+body.light .hover\:border-white\/40:hover {
+  border-color: rgba(9, 9, 11, 0.40) !important;
+}
+
+/* Action Hover backgrounds */
+body.light .hover\:bg-white\/5:hover {
+  background-color: rgba(9, 9, 11, 0.04) !important;
+}
+
+body.light .hover\:bg-white\/10:hover {
+  background-color: rgba(9, 9, 11, 0.08) !important;
+}
+
+body.light .hover\:bg-white\/15:hover {
+  background-color: rgba(9, 9, 11, 0.12) !important;
+}
+
+/* Inputs element colors in Light mode */
+body.light input, body.light textarea, body.light select {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+  border-color: rgba(9, 9, 11, 0.15) !important;
+}
+
+body.light input:focus, body.light textarea:focus, body.light select:focus {
+  border-color: #09090b !important;
+  box-shadow: 0 0 0 1px #09090b !important;
+}
+
+body.light input::placeholder, body.light textarea::placeholder {
+  color: rgba(9, 9, 11, 0.3) !important;
+}
+
+/* Overlay & modal shadows and container colors */
+body.light #welcome-card, body.light #invite-modal, body.light #card-detail-dialog, body.light #settings-form {
+  background-color: #ffffff !important;
+  border-color: #09090b !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light .shadow-2xl {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* High contrast links */
+body.light .text-blue-400 {
+  color: #2563eb !important; /* blue-600 */
+}
+
+body.light .bg-blue-950\/10 {
+  background-color: rgba(37, 99, 235, 0.08) !important;
+}
+
+body.light .border-blue-900\/20 {
+  border-color: rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Darker borders for column container in Light mode */
+body.light .border-dashed {
+  border-style: dashed !important;
+  border-color: rgba(9, 9, 11, 0.2) !important;
+}
+
+/* Scrollbar behaviors */
+body.light .custom-scrollbar::-webkit-scrollbar-track {
+  background: #f4f4f7 !important;
+}
+
+body.light .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1 !important;
+}
+
+body.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8 !important;
+}
