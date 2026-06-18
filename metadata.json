@@ -1,0 +1,6 @@
+{
+  "name": "Collaborative Trello Board",
+  "description": "A real-time collaborative Kanban board with drag-and-drop, task detail checklists, comments, and member presence tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
