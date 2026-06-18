@@ -107,8 +107,9 @@ export const useStore = create<StoreState>((set, get) => {
     if (socket) return;
 
     try {
-      const wsProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-      const wsUrl = `${wsProtocol}//${window.location.host}/ws`;
+      const wsUrl = import.meta.env.PROD
+  ? "wss://syncoboard.onrender.com/ws"
+  : `${window.location.protocol === "https:" ? "wss:" : "ws:"}//${window.location.host}/ws`;
       console.log("Connecting to websocket:", wsUrl);
       
       const ws = new WebSocket(wsUrl);
